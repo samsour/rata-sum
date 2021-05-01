@@ -1,0 +1,21 @@
+{
+    "name": "rata-sum",
+    "description": "Raspberry Pi Homeserver Configuration named after the Asurian capital in Tyria (Guild Wars).",
+    "license": "MIT",
+    "author": {
+      "name": "Sam Sauer",
+      "email": "hi@samsour.de",
+      "url": "https://samsour.de"
+    },
+    "repository": {
+      "url": "https://github.com/samsour/rata-sum.git",
+      "type": "git"
+    },
+    "bugs": {
+      "url": "https://github.com/samsour/rata-sum/issues"
+    },
+    "private": true,
+    "scripts": {
+      "start": "docker-compose up --detach"
+    }
+  }
