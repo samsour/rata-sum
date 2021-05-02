@@ -9,8 +9,5 @@ services:
       - ./services/home-assistant:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-    env_file:
-      # Read all environment variables from the env file
-      - ./.env
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
