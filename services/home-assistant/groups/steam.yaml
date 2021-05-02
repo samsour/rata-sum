@@ -1,5 +1,5 @@
   steam:
     name: Steam
     entities:
-      - sensor.steam_ !secret steam_user1
-      - sensor.steam_ !secret steam_user2
+      - !secret steam_user1_entity
+      - !secret steam_user2_entity
