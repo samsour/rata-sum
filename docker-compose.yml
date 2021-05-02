@@ -3,12 +3,12 @@ services:
   homeassistant:
     image: homeassistant/home-assistant:stable
     container_name: homeassistant
+    ports:
+    - "8123:8123"
     volumes:
       - ./services/home-assistant:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-	ports:
-	  - "8123:8123"
     env_file:
       # Read all environment variables from the env file
       - ./.env
