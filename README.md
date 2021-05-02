@@ -5,7 +5,7 @@
 
 Services:
 
-- [Homer](https://github.com/bastienwirtz/homer) as service dashboard
+<!-- - [Homer](https://github.com/bastienwirtz/homer) as service dashboard -->
 
 - [Home Assistant](https://home-assistant.io), an Home Automation platform
 
@@ -19,8 +19,8 @@ Services:
 # clone the repo to your local machine
 git clone https://github.com/samsour/rata-sum
 
-# setup secret env variables
-cp .env{.example,} && editor .env
+# setup homeassistant secret variables
+cp ./services/home-assistant/secrets.yaml{.example,} && editor ./services/home-assistant/secrets.yaml
 
 # start up services
 docker-compose up --detach
