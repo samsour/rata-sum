@@ -1,7 +1,3 @@
 homeassistant:
-  name: Home
-  latitude: 32.87336
-  longitude: 117.22743
-  elevation: 430
-  unit_system: metric
-  time_zone: "America/Los_Angeles"
+  customize: !include customize.yaml
+  packages: !include_dir_named integrations
