@@ -1,17 +1,15 @@
-version: "3.8"
+version: '3.8'
 services:
-  # services
   homeassistant:
     image: homeassistant/home-assistant:stable
     container_name: homeassistant
+    volumes:
+      - ./services/home-assistant:/config
+      - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     network_mode: host
-    environment:
-      TZ: '{{ timezone }}'
-    volumes:
-      - /etc/localtime:/etc/localtime:ro
-      - '{{ root_path }}/home-assistant:/config'
-    dns:
-      - 127.0.0.1
+    env_file:
+      # Read all environment variables from the env file
+      - ./.env
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
