@@ -1,0 +1,3 @@
+platform: deutsche_bahn
+from: !secret db_route1_from
+to: !secret db_route1_to
