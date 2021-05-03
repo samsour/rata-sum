@@ -9,3 +9,9 @@
   to: !secret db_route2_to
   offset: 00:15
   only_direct: false
+
+- platform: template
+  sensors:
+    next_departure:
+      value_template: "{{ state_attr('sensor.munich_to_ulm', 'next') }}"
+      friendly_name: "Nächste Abfahrt Richtung Uni"
