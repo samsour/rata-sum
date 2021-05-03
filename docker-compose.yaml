@@ -3,8 +3,7 @@ services:
   homeassistant:
     image: homeassistant/home-assistant:stable
     container_name: home-assistant
-    ports:
-      - 8123:8123
+    network_mode: host
     volumes:
       - ./services/home-assistant:/config
       - /etc/localtime:/etc/localtime:ro
