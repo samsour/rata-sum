@@ -1,10 +1,12 @@
 - platform: deutsche_bahn
+  name: 'Weg zur Uni'
   from: !secret db_route1_from
   to: !secret db_route1_to
   offset: 00:15
   only_direct: false
 
 - platform: deutsche_bahn
+  name: 'Weg nach Offenbach'
   from: !secret db_route2_from
   to: !secret db_route2_to
   offset: 00:15

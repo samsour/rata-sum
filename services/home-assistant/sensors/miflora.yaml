@@ -17,3 +17,23 @@
     - temperature
     - conductivity
     - battery
+
+- platform: miflora
+  mac: !secret miflora_mac_3
+  name: Pflanze 3
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: !secret miflora_mac_4
+  name: Pflanze 4
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
