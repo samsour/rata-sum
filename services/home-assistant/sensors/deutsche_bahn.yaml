@@ -1,11 +1,11 @@
 - platform: deutsche_bahn
   from: !secret db_route1_from
   to: !secret db_route1_to
-  offset: 05:15
+  offset: 00:15
   only_direct: false
 
 - platform: deutsche_bahn
   from: !secret db_route2_from
   to: !secret db_route2_to
-  offset: 05:15
+  offset: 00:15
   only_direct: false
