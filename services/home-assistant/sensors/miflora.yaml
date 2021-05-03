@@ -1,0 +1,25 @@
+- platform: miflora
+  mac: !secret miflora_mac_1
+  name: Pflanze 1
+  force_update: true
+  median: 3
+  go_unavailable_timeout: 43200
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
+
+- platform: miflora
+  mac: !secret miflora_mac_2
+  name: Pflanze 2
+  force_update: true
+  median: 3
+  go_unavailable_timeout: 43200
+  monitored_conditions:
+    - moisture
+    - light
+    - temperature
+    - conductivity
+    - battery
