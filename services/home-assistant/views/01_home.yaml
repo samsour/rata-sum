@@ -1,0 +1,51 @@
+title: Home
+path: home
+icon: 'mdi:home'
+badges: []
+cards:
+  - type: entities
+    entities:
+      - entity: sensor.date
+      - entity: sensor.time
+      - entity: sun.sun
+  - type: entities
+    entities:
+      - entity: sensor.lumi_lumi_weather_cd4aa006_temperature
+        name: Wohnzimmer
+      - entity: sensor.lumi_lumi_weather_d7cab106_temperature
+        name: Büro
+      - entity: sensor.lumi_lumi_weather_e9e3b106_temperature
+        name: Bad
+    state_color: false
+    show_header_toggle: false
+  - type: weather-forecast
+    entity: weather.bude
+  - type: horizontal-stack
+    cards:
+      - type: entities
+        entities:
+          - entity: person.sam
+      - type: entities
+        entities:
+          - entity: person.bianka
+  - type: entities
+    entities:
+      - entity: !secret db_route1_entity
+        name: !secret db_route1_name
+        secondary_info: last-updated
+      - entity: !secret db_route2_entity
+        name: !secret db_route2_name
+        secondary_info: last-updated
+  - type: map
+    entities:
+      - entity: zone.home
+      - entity: person.sam
+      - entity: person.bianka
+    dark_mode: true
+  - type: entities
+    entities:
+      - entity: light.color_light_1
+      - entity: light.dimmable_light_1
+      - entity: light.hue_play_1
+      - entity: light.hue_play_2
+    title: Lichter

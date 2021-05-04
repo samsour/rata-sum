@@ -1,0 +1,10 @@
+title: Verkehr
+path: traffic
+icon: 'mdi:train'
+badges: []
+cards:
+  - type: logbook
+    entities:
+      - !secret db_route1_sensor
+      - !secret db_route2_sensor
+    hours_to_show: 24
