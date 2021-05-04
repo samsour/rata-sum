@@ -1,0 +1,20 @@
+title: Flur
+path: hallway
+icon: 'mdi:door'
+badges: []
+cards:
+  - type: light
+    entity: light.dimmable_light_1
+  - type: entities
+    entities:
+      - >-
+        light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_1000lm_81cc44fe_level_light_color_on_off
+      - >-
+        light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_1000lm_e2a444fe_level_light_color_on_off
+      - >-
+        light.ikea_of_sweden_tradfri_bulb_e27_ws_opal_1000lm_089ff2fe_level_light_color_on_off
+    state_color: true
+    title: Deckenlicht
+  - type: entities
+    entities:
+      - binary_sensor.lumi_lumi_sensor_magnet_aq2_c23cc006_on_off

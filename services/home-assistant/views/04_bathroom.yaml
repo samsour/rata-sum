@@ -1,0 +1,19 @@
+title: Bad
+path: bathroom
+icon: 'mdi:shower'
+badges: []
+cards:
+  - type: sensor
+    entity: sensor.lumi_lumi_weather_e9e3b106_humidity
+    graph: line
+    detail: 2
+  - type: sensor
+    entity: sensor.lumi_lumi_weather_e9e3b106_temperature
+    graph: line
+    detail: 2
+    hours_to_show: 24
+  - type: entities
+    entities:
+      - entity: sensor.lumi_lumi_weather_e9e3b106_pressure
+      - entity: sensor.lumi_lumi_weather_e9e3b106_power
+        name: Sensor Akku

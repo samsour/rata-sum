@@ -1,0 +1,41 @@
+title: Wohnzimmer
+path: living-room
+icon: 'mdi:sofa'
+theme: ''
+badges: []
+cards:
+  - type: vertical-stack
+    cards:
+      - type: sensor
+        entity: sensor.lumi_lumi_weather_cd4aa006_temperature
+        graph: line
+        detail: 2
+      - type: sensor
+        entity: sensor.lumi_lumi_weather_cd4aa006_humidity
+        graph: line
+        detail: 2
+  - type: entities
+    entities:
+      - entity: light.color_light_1
+      - entity: light.hue_play_1
+      - entity: light.hue_play_2
+    title: Lichter
+  - type: grid
+    cards:
+      - type: light
+        entity: light.hue_play_1
+      - type: light
+        entity: light.hue_play_2
+      - type: light
+        entity: light.color_light_1
+    columns: 3
+    square: true
+  - type: media-control
+    entity: media_player.living_room_tv
+  - type: entities
+    entities:
+      - binary_sensor.lumi_lumi_sensor_magnet_aq2_d644c006_on_off
+      - binary_sensor.lumi_lumi_sensor_magnet_aq2_774ac006_on_off
+  - type: entities
+    entities:
+      - entity: sensor.lumi_lumi_weather_cd4aa006_pressure

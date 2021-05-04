@@ -1,0 +1,52 @@
+title: Büro
+path: office
+icon: 'mdi:desk'
+badges: []
+cards:
+  - type: entities
+    entities:
+      - entity: light.hue_color_candle_1
+      - entity: light.hue_color_candle_2
+    title: Licht
+  - type: horizontal-stack
+    cards:
+      - type: light
+        entity: light.hue_color_candle_1
+      - type: light
+        entity: light.hue_color_candle_2
+  - type: sensor
+    entity: sensor.lumi_plug01_electrical_measurement
+    hours_to_show: 4
+    name: Stromverbrauch Büro
+    detail: 2
+    graph: line
+  - type: entities
+    entities:
+      - entity: !secret steam_user1_entity
+      - entity: !secret steam_user2_entity
+    title: Steam
+  - type: iframe
+    url: !secret iframe_url
+    aspect_ratio: 50%
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.cpu_temperature
+        min: 0
+        max: 100
+        name: CPU Temperatur
+      - type: gauge
+        entity: sensor.disk_use_percent
+        min: 0
+        max: 100
+        name: Speicher
+      - type: gauge
+        entity: sensor.lumi_lumi_plug_mmeu01_8b278a3c_analog_input
+        min: 0
+        max: 100
+        name: Stromverbrauch
+  - type: entities
+    entities:
+      - entity: sensor.ipv4_address_eth0
+      - entity: sensor.last_boot
+      - entity: binary_sensor.updater
