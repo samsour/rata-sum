@@ -1,5 +1,10 @@
 plant:
+  openplantbook:
+    client_id: !secret plantbook_client_id
+    secret: !secret plantbook_secret
   Kentia Palme:
+    species: howea forsteriana
+
     sensors:
       moisture: sensor.kentia_palme_moisture
       battery: sensor.kentia_palme_battery
@@ -8,6 +13,7 @@ plant:
       brightness: sensor.kentia_light_intensity
     min_moisture: 20
   Calathea:
+    species: calathea glamour star
     sensors:
       moisture: sensor.calathea_moisture
       battery: sensor.calathea_battery
@@ -16,6 +22,7 @@ plant:
       brightness: sensor.calathea_intensity
     min_moisture: 20
   Chilis:
+    species: capsicum annuum
     sensors:
       moisture: sensor.chilis_moisture
       battery: sensor.chilis_battery
@@ -24,6 +31,7 @@ plant:
       brightness: sensor.chilis_intensity
     min_moisture: 20
   Drachenbaum:
+    species: dracaena fragrans lemon lime
     sensors:
       moisture: sensor.drachenbaum_moisture
       battery: sensor.drachenbaum_battery
