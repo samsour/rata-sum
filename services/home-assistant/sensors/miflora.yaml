@@ -1,6 +1,6 @@
 - platform: miflora
   mac: !secret miflora_mac_1
-  name: Pflanze 1
+  name: Kentia Palme
   monitored_conditions:
     - moisture
     - light
@@ -10,7 +10,7 @@
 
 - platform: miflora
   mac: !secret miflora_mac_2
-  name: Pflanze 2
+  name: Calathea
   monitored_conditions:
     - moisture
     - light
@@ -20,7 +20,7 @@
 
 - platform: miflora
   mac: !secret miflora_mac_3
-  name: Pflanze 3
+  name: Drachenbaum
   monitored_conditions:
     - moisture
     - light
@@ -30,7 +30,7 @@
 
 - platform: miflora
   mac: !secret miflora_mac_4
-  name: Pflanze 4
+  name: Chilis
   monitored_conditions:
     - moisture
     - light
