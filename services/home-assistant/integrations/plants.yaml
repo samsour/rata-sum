@@ -1,0 +1,9 @@
+plant:
+  Kentia Palme:
+    sensors:
+      moisture: sensor.kentia_palme_moisture
+      battery: sensor.kentia_palme_battery
+      temperature: sensor.kentia_palme_temperature
+      conductivity: sensor.kentia_palme_conductivity
+      brightness: sensor.kentia_palme_brightness
+    min_moisture: 20
