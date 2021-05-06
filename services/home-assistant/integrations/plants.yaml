@@ -10,7 +10,7 @@ plant:
       battery: sensor.kentia_palme_battery
       temperature: sensor.kentia_palme_temperature
       conductivity: sensor.kentia_palme_conductivity
-      brightness: sensor.kentia_light_intensity
+      brightness: sensor.kentia_palme_light_intensity
     min_moisture: 20
   Calathea:
     species: calathea glamour star
@@ -19,7 +19,7 @@ plant:
       battery: sensor.calathea_battery
       temperature: sensor.calathea_temperature
       conductivity: sensor.calathea_conductivity
-      brightness: sensor.calathea_intensity
+      brightness: sensor.calathea_light_intensity
     min_moisture: 20
   Chilis:
     species: capsicum annuum
@@ -28,7 +28,7 @@ plant:
       battery: sensor.chilis_battery
       temperature: sensor.chilis_temperature
       conductivity: sensor.chilis_conductivity
-      brightness: sensor.chilis_intensity
+      brightness: sensor.chilis_light_intensity
     min_moisture: 20
   Drachenbaum:
     species: dracaena fragrans lemon lime
@@ -37,5 +37,5 @@ plant:
       battery: sensor.drachenbaum_battery
       temperature: sensor.drachenbaum_temperature
       conductivity: sensor.drachenbaum_conductivity
-      brightness: sensor.drachenbaum_intensity
+      brightness: sensor.drachenbaum_light_intensity
     min_moisture: 20
