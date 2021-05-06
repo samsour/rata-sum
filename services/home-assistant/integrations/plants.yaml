@@ -5,5 +5,29 @@ plant:
       battery: sensor.kentia_palme_battery
       temperature: sensor.kentia_palme_temperature
       conductivity: sensor.kentia_palme_conductivity
-      brightness: sensor.kentia_palme_brightness
+      brightness: sensor.kentia_light_intensity
+    min_moisture: 20
+  Calathea:
+    sensors:
+      moisture: sensor.calathea_moisture
+      battery: sensor.calathea_battery
+      temperature: sensor.calathea_temperature
+      conductivity: sensor.calathea_conductivity
+      brightness: sensor.calathea_intensity
+    min_moisture: 20
+  Chilis:
+    sensors:
+      moisture: sensor.chilis_moisture
+      battery: sensor.chilis_battery
+      temperature: sensor.chilis_temperature
+      conductivity: sensor.chilis_conductivity
+      brightness: sensor.chilis_intensity
+    min_moisture: 20
+  Drachenbaum:
+    sensors:
+      moisture: sensor.drachenbaum_moisture
+      battery: sensor.drachenbaum_battery
+      temperature: sensor.drachenbaum_temperature
+      conductivity: sensor.drachenbaum_conductivity
+      brightness: sensor.drachenbaum_intensity
     min_moisture: 20
