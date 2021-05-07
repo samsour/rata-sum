@@ -31,7 +31,7 @@ plant:
       brightness: sensor.chilis_light_intensity
     min_moisture: 20
   Drachenbaum:
-    species: dracaena fragrans lemon lime
+    species: dracaena fragrans 'lemon lime'
     sensors:
       moisture: sensor.drachenbaum_moisture
       battery: sensor.drachenbaum_battery
