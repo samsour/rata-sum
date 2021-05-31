@@ -1,0 +1,8 @@
+alias: Storageroom Light
+description: "Turn on light based on binary sensor with memory"
+use_blueprint:
+  path: tommekevda/turn-on-light-based-on-binary-sensor-with-memory.yaml
+  input:
+    before_time: "0:00:00"
+    target_light: light.storeroom_light
+    trigger_binary_sensor_entity: binary_sensor.storeroom_door
