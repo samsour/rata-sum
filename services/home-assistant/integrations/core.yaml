@@ -44,7 +44,7 @@ ios:
 wake_on_lan:
 
 # split imports
-automation: !include_dir_list ../automations
+automation: !include_dir_merge_list ../automations
 group: !include_dir_merge_named ../groups
 scene: !include_dir_list ../scenes
 script: !include_dir_merge_named ../scripts
