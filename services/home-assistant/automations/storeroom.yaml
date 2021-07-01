@@ -1,5 +1,5 @@
-alias: Storage Room Light
-description: "Storage Room Light Automation with Memory Function"
+alias: Storeroom Light
+description: Storeroom Light Automation with Memory Function
 use_blueprint:
   path: tommekevda/turn-on-light-based-on-binary-sensor-with-memory.yaml
   input:
