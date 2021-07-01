@@ -1,0 +1,32 @@
+door opened:
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.storeroom_door
+      from: "off"
+      to: "on"
+  condition: []
+  action:
+    - service: scene.create
+      data:
+        scene_id: before
+        snapshot_entities:
+          - light.storeroom_light
+    - service: light.turn_on
+      target:
+        entity_id:
+          - light.storeroom_light
+      data:
+        brightness_pct: 100
+        color_name: white
+
+door closed:
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.storeroom_door
+      from: "on"
+      to: "off"
+  condition: []
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.before
