@@ -1,4 +1,4 @@
-door opened:
+- alias: "Storageroom Door opened"
   trigger:
     - platform: state
       entity_id: binary_sensor.storeroom_door
@@ -19,7 +19,7 @@ door opened:
         brightness_pct: 100
         color_name: white
 
-door closed:
+- alias: "Storageroom Door closed"
   trigger:
     - platform: state
       entity_id: binary_sensor.storeroom_door
