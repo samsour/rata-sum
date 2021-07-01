@@ -1,0 +1,23 @@
+alias: Living Room Lights
+description: Turn on the lights when the sun goes down
+mode: single
+trigger:
+  - platform: sun
+    event: sunset
+condition: []
+action:
+  - type: turn_on
+    device_id: e7bf8e762ca3f7bb0558180afb7a58c0
+    entity_id: light.color_light_1
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: 46413c476c92a0b19aa654d647171175
+    entity_id: light.hue_play_1
+    domain: light
+    brightness_pct: 100
+  - type: turn_on
+    device_id: d81e8447424c88e182ab3060d3c33f53
+    entity_id: light.hue_play_2
+    domain: light
+    brightness_pct: 100
