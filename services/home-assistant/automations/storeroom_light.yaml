@@ -31,3 +31,5 @@
     - service: scene.turn_on
       target:
         entity_id: scene.before
+      data:
+        transition: 2
