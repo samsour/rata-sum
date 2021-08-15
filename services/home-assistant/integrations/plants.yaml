@@ -4,7 +4,6 @@ plant:
     secret: !secret plantbook_secret
   Kentia Palme:
     species: howea forsteriana
-
     sensors:
       moisture: sensor.kentia_palme_moisture
       battery: sensor.kentia_palme_battery
