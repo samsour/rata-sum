@@ -8,7 +8,7 @@
   action:
     - service: scene.create
       data:
-        scene_id: before
+        scene_id: storeroom_light_before
         snapshot_entities:
           - light.storeroom_light
     - service: light.turn_on
@@ -30,6 +30,6 @@
   action:
     - service: scene.turn_on
       target:
-        entity_id: scene.before
+        entity_id: scene.storeroom_light_before
       data:
         transition: 2
