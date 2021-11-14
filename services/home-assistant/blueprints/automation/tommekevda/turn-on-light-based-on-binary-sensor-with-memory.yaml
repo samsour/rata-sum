@@ -1,0 +1,124 @@
+blueprint:
+  name: Turn on light based on binary sensor with memory
+  description: Automated turning on a light based on a binary sensor while remembering
+    if the light was turned on by automation or not.
+  domain: automation
+  input:
+    automation_allowed_helper:
+      name: Automation allowed helper
+      description: Master switch to determine if automation is allowed for this automation
+        at this moment. For example a switch to temporarily disable automation in
+        a certain room when guests are present.
+      selector:
+        entity:
+          domain: input_boolean
+    automation_memory_helper:
+      name: Automation memory helper
+      description: This helper remembers if the target light has been triggered by
+        automation or not.
+      selector:
+        entity:
+          domain: input_boolean
+    after_time:
+      name: (Optional) After time
+      description: The time after which the automation is allowed to run
+      selector:
+        time: {}
+      default: 0:00:00
+    before_time:
+      name: (Optional) Before time
+      description: The time before which the automation is allowed to run
+      selector:
+        time: {}
+      default: 0:00:00
+    target_light:
+      name: Target light or light group
+      description: The target light or light group that will be automated
+      selector:
+        entity:
+          domain: light
+    trigger_binary_sensor_entity:
+      name: Binary sensor
+      description: Binary sensor entity on which the state needs to be "on" to trigger
+        the automation
+      selector:
+        entity:
+          domain: binary_sensor
+  source_url: https://gist.github.com/tommekevda/3f74f6d76cf1dc52f2f827d4bdbed191
+trigger:
+- platform: time_pattern
+  hours: '*'
+  minutes: /1
+  seconds: /10
+- platform: state
+  entity_id: !input 'target_light'
+  from: 'on'
+  to: 'off'
+condition: []
+variables:
+  target_light: !input 'target_light'
+action:
+- choose:
+  - conditions:
+    - condition: template
+      value_template: '{{ trigger.entity_id == target_light and trigger.from_state.state
+        == ''on'' and trigger.to_state.state == ''off'' }}'
+    - condition: state
+      entity_id: !input 'automation_memory_helper'
+      state: 'on'
+    sequence:
+    - service: input_boolean.turn_off
+      target:
+        entity_id: !input 'automation_memory_helper'
+  default:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: !input 'automation_allowed_helper'
+        state: 'on'
+      - condition: state
+        entity_id: !input 'trigger_binary_sensor_entity'
+        state: 'on'
+      - condition: time
+        after: !input 'after_time'
+        before: !input 'before_time'
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+        - sat
+        - sun
+      - condition: state
+        state: 'off'
+        entity_id: !input 'target_light'
+      sequence:
+      - service: light.turn_on
+        data:
+          transition: 5
+          brightness_pct: 100
+        target:
+          entity_id: !input 'target_light'
+      - service: input_boolean.turn_on
+        target:
+          entity_id:
+          - !input 'automation_memory_helper'
+    - conditions:
+      - condition: state
+        entity_id: !input 'automation_allowed_helper'
+        state: 'on'
+      - condition: state
+        entity_id: !input 'automation_memory_helper'
+        state: 'on'
+      - condition: state
+        entity_id: !input 'trigger_binary_sensor_entity'
+        state: 'off'
+      sequence:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: !input 'target_light'
+    default: []
+mode: queued
+max: 2

@@ -1,0 +1,76 @@
+- id: '1620007004209'
+  alias: Morgens im Büro
+  description: ''
+  trigger:
+  - platform: time
+    at: '9:00'
+  condition: []
+  action:
+  - type: turn_on
+    device_id: d0cd302972ac802a39f172aa1c7e395c
+    entity_id: light.hue_color_candle_1
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1622465014536'
+  alias: Abstellkammer Licht an
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: a21a52096684f2dfde9013e555574fdb
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 3f8a2598b5b2b22bc373a288c756e53e
+    entity_id: light.tz3000_i8l0nqdu_ts0503b_level_light_color_on_off
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1622465188004'
+  alias: Nachbarraum Licht an
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: a21a52096684f2dfde9013e555574fdb
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_on_off
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 3f8a2598b5b2b22bc373a288c756e53e
+    entity_id: light.tz3000_i8l0nqdu_ts0503b_level_light_color_on_off
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1622467566962'
+  alias: Neue Automatisierung
+  description: asdasdasd
+  trigger:
+  - type: opened
+    platform: device
+    device_id: a21a52096684f2dfde9013e555574fdb
+    entity_id: binary_sensor.storeroom_door
+    domain: binary_sensor
+  condition: []
+  action:
+  - type: turn_on
+    device_id: 3f8a2598b5b2b22bc373a288c756e53e
+    entity_id: light.storeroom_light
+    domain: light
+    brightness_pct: 100
+  mode: single
+- id: '1625133858403'
+  alias: Neue Automatisierung
+  description: ''
+  use_blueprint:
+    path: tommekevda/turn-on-light-based-on-binary-sensor-with-memory.yaml
+    input:
+      before_time: 0:00:00
+      automation_allowed_helper: input_boolean.storage_room_master_switch
+      automation_memory_helper: input_boolean.storage_room_memory
+      target_light: light.storeroom_light
+      trigger_binary_sensor_entity: binary_sensor.storeroom_door

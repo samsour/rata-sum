@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  homeassistant:
+    imagex: homeassistant/home-assistant:stable
+    container_name: home-assistant
+    network_mode: host
+    privileged: true
+    volumes:
+      - ./services/home-assistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
