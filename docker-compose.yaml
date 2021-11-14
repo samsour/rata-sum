@@ -10,4 +10,4 @@ services:
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     devices:
-      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2268682-if00:/dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2268682-if00
