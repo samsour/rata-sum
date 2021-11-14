@@ -1,9 +1,0 @@
-# Example scenes.yaml entry
-- id: my_unique_id # <-- Required for editor to work.
-  name: Romantic
-  entities:
-    light.tv_back_light: on
-    light.ceiling:
-      state: on
-      xy_color: [0.33, 0.66]
-      brightness: 200
