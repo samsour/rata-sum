@@ -6,39 +6,10 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Berlin
 
-  # enables configuration ui
-  config:
-
-  # incorporate latest changes
-  default_config:
-
-  # modify logger
-  logger:
-    default: warn
-    logs:
-      homeassistant.setup: warn
-      homeassistant.loader: warn
-      homeassistant.helpers.entity: warn
-      homeassistant.config_entries: warn
-      homeassistant.components.http.ban: warn
-      homeassistant.components.discovery: warn
-      homeassistant.components.upnp: warn
-      homeassistant.components.ipp: warn
-
   # database recorder
   recorder:
     purge_keep_days: 7
     commit_interval: 600
-
-  # enable themes
-  frontend:
-    themes: !include_dir_merge_named ../themes
-
-  # enable auto discovery
-  discovery:
-
-  # enable wake on lan
-  wake_on_lan:
 
   customize: !include customize.yaml
   packages: !include_dir_named integrations
