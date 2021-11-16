@@ -1,5 +1,8 @@
-# general settings
+# General settings
 homeassistant:
+  # Home Assistant required
+  default_config:
+
   name: Homeassistant
   latitude: !secret home_latitude
   longitude: !secret home_longitude
