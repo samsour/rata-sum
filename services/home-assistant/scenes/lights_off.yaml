@@ -1,0 +1,4 @@
+- name: "Lights_off"
+  entities:
+    light.all:
+      state: false
