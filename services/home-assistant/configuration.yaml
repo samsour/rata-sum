@@ -6,11 +6,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Berlin
 
-  # database recorder
-  recorder:
-    purge_keep_days: 7
-    commit_interval: 600
-
   customize: !include customize.yaml
   packages: !include_dir_named integrations
 
