@@ -44,10 +44,10 @@ homeassistant:
   packages: !include_dir_named integrations
 
   # split imports
-  automation: !include_dir_merge_list ./automations
-  group: !include_dir_merge_named ./groups
+  automation: !include_dir_merge_list automations/
+  group: !include_dir_merge_named groups/
   scene: !include scenes.yaml
-  scene old: !include_dir_merge_list scenes
-  script: !include_dir_merge_named ./scripts
-  sensor: !include_dir_merge_list ./sensors
-  switch: !include_dir_list ./switches
+  scene old: !include_dir_merge_list scenes/
+  script: !include_dir_merge_named scripts/
+  sensor: !include_dir_merge_list sensors/
+  switch: !include_dir_list switches/
